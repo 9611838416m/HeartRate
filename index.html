@@ -1,12 +1,7 @@
 
 <html>
   <head>
-<!-- 2016 Gordon Williams, gw@pur3.co.uk
 
-Any copyright is dedicated to the Public Domain.
-http://creativecommons.org/publicdomain/zero/1.0/
-
--->
     <meta charset="utf-8">
     <meta name="viewport" content="width=320, initial-scale=1">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -33,7 +28,7 @@ navigator.mediaDevices.enumerateDevices().then(function(devices) {
     console.log(device.kind + ": " + device.label +
                 " id = " + device.deviceId/*, JSON.stringify(device,null,2)*/);
     if (device.kind=="videoinput" /*&& constraints.video===true*/)
-      constraints.video = { optional: [{sourceId: device.deviceId}, { fillLightMode: "flash" }] };
+      constraints.video = { optional: [{sourceId: device.deviceId}, { fillLightMode: "torch" }] };
   });
   initialize2();
 }).catch(function(err) {
